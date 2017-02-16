@@ -9,16 +9,16 @@
 </head>
 <body>
 	<h1>Hi</h1>
-	<div ng-controller="ContactController">
-		First Name : <input type="text" ng-model="firstName"/>
-		Last Name : <input type="text" ng-model="lastName"/>
-		<input type="button" value="Get Full Name" ng-click="getFullName()"/>
+	<div ng-controller="ContactController as vm">
+		First Name : <input type="text" ng-model="vm.firstName"/>
+		Last Name : <input type="text" ng-model="vm.lastName"/>
+		<input type="button" value="Get Full Name" ng-click="vm.getFullName()"/>
 		<br/>
-		Angular Expression example Full Name : {{firstName}} {{lastName}}
+		Angular Expression example Full Name : {{vm.firstName}} {{vm.lastName}}
 		<br/>
-		ng-Bind Example : <span ng-bind="firstName"></span>
+		ng-Bind Example : <span ng-bind="vm.firstName"></span>
 		<br/>
-		Button click handle Full Name From Controller = {{fullName}}
+		Button click handle Full Name From Controller = {{vm.fullName}}
 	</div>
 
 </body>

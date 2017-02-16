@@ -1,13 +1,14 @@
 myApp.controller("ContactController", Contacts);
 
-function Contacts($scope){
-	var contactModel = $scope;
+function Contacts(){
 	
-	contactModel.getFullName = function(){
-		var fName = contactModel.firstName.length > 0 ? contactModel.firstName : "";
-		var lName = contactModel.lastName.length > 0 ? contactModel.lastName : ""; 
+	var vm = this;
+	console.log(vm);
+	vm.getFullName = function(){
+		var fName = vm.firstName.length > 0 ? vm.firstName : "";
+		var lName = vm.lastName.length > 0 ? vm.lastName : ""; 
 		
-		contactModel.fullName = fName + " " + lName;
+		vm.fullName = fName + " " + lName;
 	}
 
 } 
